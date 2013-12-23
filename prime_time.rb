@@ -94,3 +94,32 @@ class PrimeTime
     n * (Math.log(n) + Math.log(Math.log(n)))
   end
 end
+
+class PrimeSieve
+  def initialize
+    @sieve = (1..499999).map{|n| n * 2 + 1 }.unshift(2)
+    @current_index = -1
+    @primes = []
+  end
+
+  def next
+    @current_index += 1
+    # @sieve.delete_at(@current_index) until next_prime?(@sieve[@current_index]) || @sieve[@current_index].nil?
+    @current_index += 1 until @sieve[@current_index].nil? || next_prime?(@sieve[@current_index])
+  end
+
+  def current
+    @sieve[@current_index]
+  end
+
+  def next_prime?(x)
+    root_x = Math.sqrt(x)
+    result = true
+    @sieve[1..-1].each do |prime|
+      break if prime > root_x
+      result &= x % prime != 0
+      break unless result
+    end
+    result
+  end
+end
