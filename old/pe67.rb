@@ -114,3 +114,5 @@ def pe67
 
   data.flatten.max
 end
+
+puts pe67
