@@ -18,3 +18,11 @@ module Utils
     end
   end
 end
+
+module GCDExt
+  def gcd(n)
+    Utils.gcd(self, n)
+  end
+end
+
+Integer.prepend GCDExt

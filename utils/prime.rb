@@ -75,3 +75,12 @@ end
 # end
 
 # puts e.lazy.drop(25_000).first
+
+require 'prime'
+module PrimeExt
+  def relatively_prime?(n)
+    n_prime_factors = Set.new(n.prime_division.map(&:first))
+    !self.prime_division.map(&:first).any? { |p| n_prime_factors.include?(p) }
+  end
+end
+Integer.prepend PrimeExt

@@ -68,7 +68,7 @@ def triangle_numbers(n)
     triangle_number += triangle_step
     tri_nums << triangle_number
     triangle_step += 1
-  end  
+  end
   tri_nums
 end
 
@@ -152,3 +152,4 @@ end
 # end
 
 
+pp pe12

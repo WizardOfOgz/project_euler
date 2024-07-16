@@ -39,7 +39,7 @@ end
 def trail_len(n)
   @trail ||= {1 => 1}
 
-  trail = [] 
+  trail = []
   # trail.push(n) unless @trail[n]
   last_m = n
   last_distance = 0
@@ -74,7 +74,7 @@ def trail(n)
   trail = [n]
 
   while n != 1
-    
+
     if n % 2 == 0
       n = n/2
     else
@@ -86,3 +86,5 @@ def trail(n)
 
   trail
 end
+
+pp pe13_smarter

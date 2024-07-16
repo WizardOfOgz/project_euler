@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    benchmark-ips (2.10.0)
     rbtree (0.4.5)
     set (1.0.2)
     sorted_set (1.0.3)
@@ -11,6 +12,7 @@ PLATFORMS
   x86_64-darwin-19
 
 DEPENDENCIES
+  benchmark-ips
   sorted_set
 
 BUNDLED WITH
